@@ -1,3 +1,8 @@
+:root{
+    --bgColor : white;
+    --textColor : black;
+}
+
 body{ /* Cambia del color del texto por defecto y la fuente, queria poner comic sans pero no se puede :( */
     color: black;
     font-family: 'Courier New', Courier, monospace;
