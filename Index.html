@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<script>
+    function changeCSS(){ /*Funcion para alternar entre los dos documentos CSS*/
+        var currentCSS = document.getElementsByTagName("link")[0]
+        if (currentCSS.getAttribute("href") == "css/default.css"){
+            currentCSS.setAttribute("href", "css/s/nightMode.css")
+            console.log("if")
+        } else {
+            currentCSS.setAttribute("href", "css/default.css")
+            console.log("else")
+        }
+    }
+</script>
+
+<html lang = "es"><!--Comentado porque me daba error en el testeo de xhtml-->
+    <title>Ivan Montejo's amazing class notes</title>
+    <link rel="stylesheet" href="css/default.css" id = "default">
+    <meta charset="utf-8">
+    <base target="_blank">
+
+    <body>
+        <div id = "banner">
+            <button onclick="changeCSS()">Cambiar Estilo!</button>
+            <header>Los maravillosos apuntes de Iván</header>
+        </div>
+    </body>
+</html>

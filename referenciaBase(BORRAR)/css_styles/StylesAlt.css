@@ -1,0 +1,93 @@
+body{ /* Cambia del color del texto por defecto y la fuente, queria poner comic sans pero no se puede :( */
+    color: rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+#banner { /*Cabecera para la pagina*/
+    background-image: url("../img/HBG.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+    border-left: 20px solid magenta;
+    padding: 10px;
+    outline: 10px solid magenta;
+    padding-bottom: 300px;
+    text-shadow: 2px 2px 2px rgb(7, 0, 37);
+}
+
+th {
+    border: 3px solid rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+td {
+    border: 2px dashed rgb(12, 0, 69);
+}
+
+#pIntro { /*Texto introductorio*/
+    background: rgb(82, 23, 72);
+    text-shadow: 0px 0px 2px black;
+    color: rgb(198, 255, 174);
+    font-size: 120%;
+}
+
+.pNormal { /*Texto normal*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+}
+
+h1 {
+    color: #f34fff; 
+    font-style: italic; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2 {
+    color: #75f1ff; 
+    font-style: italic; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h3 {
+    color: rgb(0, 255, 0);
+}
+
+.quote {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+}
+
+a {
+    background-color: rgb(255, 130, 130);
+    font-style: oblique;
+    font-weight: bold;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+ul {
+    list-style:circle;
+}
+
+.HighlightedText {
+    font-weight: 600;
+    text-decoration-line: underline;
+}
+
+button {
+    float: right;
+    left: 85%;
+    position: fixed;
+    background-color: #4CAF50;
+    border: 3px black;
+    color:black;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
+  }
