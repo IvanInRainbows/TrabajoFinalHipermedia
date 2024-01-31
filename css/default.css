@@ -1,32 +1,38 @@
 :root{
-    --bgColor : white;
-    --textColor : black;
+    --bgColor : rgb(255, 255, 255);
+    --textColor : rgb(0, 0, 0);
+    --baseTextSize : 12px;
+    --headerHeight: 80px;
+}
+
+header{
+    height: 80px;
+    z-index: 10;
 }
 
 body{ /* Cambia del color del texto por defecto y la fuente, queria poner comic sans pero no se puede :( */
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
+    color: var(--textColor);
+    /*font-family: 'Courier New', Courier, monospace;*/
     background-color: white;
     
 }
 
 #banner { /*Cabecera para la pagina*/
-    background-image: url("../img/HBG.jpg");
+    /*background-image: url("../img/HBG.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: bottom;
     border-left: 20px solid rgb(48, 29, 173);
     padding: 10px;
-    outline: 10px solid rgb(48, 29, 173);
-    padding-bottom: 300px;
-    text-shadow: 2px 2px 2px rgb(7, 0, 37);
+    outline: 10px solid azure;
+    padding-bottom: 300px;*/
 }
 
 button {
     float: right;
     left: 85%;
     position: fixed;
-    background-color: #4CAF50;
+    background-color: #beb5d6;
     border: 3px black;
     color:black;
     padding: 15px 32px;
@@ -35,6 +41,31 @@ button {
     font-size: 16px;
     font-weight: bolder;
   }
+
+nav{
+    background: azure;
+    position: fixed;
+    float: none;
+    width: 100%;
+    height: var(--headerHeight);
+}
+
+nav ul{
+    list-style-type: none;
+    text-align: left;
+    margin: 0 2% auto 0;
+    padding-left: 0;
+    max-width: 100%;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: var(--headerHeight);
+}
+
+p{
+    width: 10%;
+}
 
 /*
 th {
