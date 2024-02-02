@@ -1,130 +1,122 @@
-:root{
+:root{ /*Variables generales para cambiar cuando haga el estilo alternativo o modo noche*/
     --bgColor : rgb(255, 255, 255);
     --textColor : rgb(0, 0, 0);
     --baseTextSize : 12px;
-    --headerHeight: 80px;
+
+    --headerFontSize: 20px;
+    --headerHeight: 60px;
+    --headerHoverColor: rgb(217, 255, 255);
+    --headerBgColor: azure;
 }
 
-header{
-    height: 80px;
-    z-index: 10;
+header{ /*Propiedades de la cabecera*/
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 body{ /* Cambia del color del texto por defecto y la fuente, queria poner comic sans pero no se puede :( */
     color: var(--textColor);
     /*font-family: 'Courier New', Courier, monospace;*/
-    background-color: white;
-    
+    margin: 0px;
 }
 
-#banner { /*Cabecera para la pagina*/
-    /*background-image: url("../img/HBG.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: bottom;
-    border-left: 20px solid rgb(48, 29, 173);
-    padding: 10px;
-    outline: 10px solid azure;
-    padding-bottom: 300px;*/
-}
-
-button {
-    float: right;
-    left: 85%;
+nav{ /*Propiedades de la seccion de navegacion de la cabecera*/
+    background: var(--headerBgColor);
     position: fixed;
-    background-color: #beb5d6;
-    border: 3px black;
-    color:black;
-    padding: 15px 32px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bolder;
-  }
-
-nav{
-    background: azure;
-    position: fixed;
-    float: none;
+    top: 0;
+    left: 0;
     width: 100%;
     height: var(--headerHeight);
 }
 
-nav ul{
+nav ul{ /*Lista desordenada de elementos de navegacion dentro de la propia pagina*/
     list-style-type: none;
     text-align: left;
     margin: 0 2% auto 0;
-    padding-left: 0;
-    max-width: 100%;
+    max-width: 50%;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size: var(--headerFontSize);
 }
 
-nav ul li{
+nav ul li{ /*Propiedades de cada elemento de la lista*/
     display: inline-block;
     line-height: var(--headerHeight);
 }
 
-p{
+nav ul li a{ /*Propiedades de los hiperlinks*/
+    text-decoration: none;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+p{ /*Esto es un poco para testeo*/
     width: 10%;
 }
 
-/*
-th {
-    border: 3px solid white;
+.content{ /*Contenidos de la pagina, por debajo de header*/
+    margin-top: var(--headerHeight);
+}
+
+.dropdown{ /*Propiedades generales del elemento d ela lista desordenada que contiene el dropdown*/
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn{ /*Propiedades del boton que despliega el dropdown menu*/
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family:Arial, Helvetica, sans-serif;
     font-weight: bold;
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+    font-size: var(--headerFontSize);
 }
 
-td {
-    border: 2px dashed rgb(175, 251, 255);
+.dropdown-content{ /*Propiedades de cada elemento que despliega el dropdown*/
+    display: none;
+    position:absolute;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 11;
+    background-color: var(--headerBgColor);
 }
 
-#pIntro { /*Texto introductorio* /
-    background: rgb(165, 255, 253);
-    text-shadow: 0px 0px 2px black;
-    color: blue;
-    font-size: 120%;
+.dropdown-content a{ /*Propiedades del hipervingulo dentro de cada elemento que despliega el Dropdown*/
+    display: block;
 }
 
-.pNormal { /*Texto normal* /
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 10px;
+nav img{ /*Propiedades de la imagen dentro de la barra de navegacion*/
+    display:block;
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 50px;
+    height: 50px;
+    float:right;
 }
 
-h1 {
-    color: #f34fff; 
-    font-style: italic; 
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.imageHyperlink { /*Clase generica para hacer que el hover funcionara bien*/
+    opacity: 1;
 }
 
-h2 {
-    color: #75f1ff; 
-    font-style: italic; 
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.dropdown:hover .dropdown-content {display: block;}/*Hover que despliega los elementos del dropdown, o mas bien los muestra*/
+
+.imageHyperlink :hover {  /*Hover de la imagen*/
+    /*width: 50px;
+    height: 50px;*/
+    opacity: 0.8;
+    background-color: var(--headerHoverColor);
 }
 
-h3 {
-    color: rgb(0, 255, 0);
+.dropdown-content :hover{ /*Hover del contenido de cada elemento de dropdown*/
+    background-color: var(--headerHoverColor);
+    box-shadow: inset 0px 0px 3px rgba(0,0,0,0.2);
 }
 
-.quote {
-    color: rgb(255, 224, 162);
-    font-weight: bold;
-}
-
-a {
-    background-color: rgb(255, 130, 130);
-    font-style: oblique;
-    font-weight: bold;
-}
-
-ol {
-    list-style-position: inside;
-}
-
-ul {
-    list-style:circle;
-}
-
-.HighlightedText {
-    font-weight: 600;
-    text-decoration-line: underline;
+nav ul li:hover { /*Hover de los elementos de la barra de navegacion*/
+    background-color: var(--headerHoverColor);
+    box-shadow: inset 0px 0px 3px rgba(0,0,0,0.2);
 }
