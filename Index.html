@@ -67,7 +67,7 @@
     <!--############## Comienza el contenido de la pagina #################-->
     <main>
         <!--############### INICIO #################-->
-        <section class="active">
+        <section class="unactive">
             <h1>Placeholder</h1>
             <p>
                 PRIMERA PARTE
@@ -126,7 +126,7 @@
             </p>
         </section>
         <!--############### ABOUT ME #################-->
-        <section>
+        <section class="unactive">
             <img src="img/IvanIMG.jpg" style="height: 40%; width: 40%; display: inline-block;" alt="">
             <div class="titles">
                 <h1>Ivan</h1>
@@ -174,7 +174,7 @@
             </p>
         </section>
         <!--############### CONTACTO #################-->
-        <section>
+        <section class="unactive">
             <img src="img/IvanIMG.jpg" style="height: 40%; width: 40%; display: inline-block;" alt="">
             <div class="titles">
                 <h1>CONTACTO</h1>
@@ -220,22 +220,98 @@
         </section>
 
         <!--############### APUNTES #################-->
-        <section><!--Sintaxis-->
+        <section class="unactive"><!--Sintaxis-->
             <h1>APUNTES DE SINTAXIS</h1>
         </section>
         
-        <section><!--Hipermedia-->
+        <section class="active"><!--Hipermedia-->
             <h1>APUNTES DE HIPERMEDIA</h1>
 			<div class="hipermediaSection">
                 <header class="hipermediaSectionHeader">
                     SEMANA I
-                    <button>+</button>
+                    <button class="plusBtn">+</button>
                 </header>
-                <p style="display: none;" data-id="s1">Hola</p>
+                <div class="hipermediaSectionContent">
+                    <p>
+                        Hola
+                    </p>
+                </div>
+            </div>
+
+            <div class="hipermediaSection">
+                <header class="hipermediaSectionHeader">
+                    SEMANA IV
+                    <button class="plusBtn">+</button>
+                </header>
+                <div class="hipermediaSectionContent">
+                    <form action="" name="comments" onsubmit="debugForm()" target="_self"> <!--Pruebas con el Form-->
+                        <label for="fname">Nombre: </label>
+                        <input type="text" name="fname" id=""><br>
+
+                        <label for="surname">Apellido: </label>
+                        <input type="text" name="surname" id=""><br>
+
+                        <label for="comment">Comentario: </label>
+                        <input type="text" name="comment" id=""><br>
+
+                        <label for="anon">Anónimo</label>
+                        <input type="checkbox" name="anon"><br>
+
+                        <label for="commentColor">Seleccional el color de tu Comentario:</label><br>
+                        <input type="color" name="commentColor"><br>
+
+                        <input type="range"><br>
+
+                        <label for="favFruit">Su fruta favorita:</label>
+                        <select name="favFruit" id="favFruit">
+                            <option hidden selected value>--Seleccione una fruta--</option>
+                            <option value="naranja">Naranja</option>
+                            <option value="cereza">Cereza</option>
+                            <option value="melon">Melón</option>
+                            <option value="fresa">Fresa</option>
+                        </select><br>
+
+                        <input type="submit" value="submit">
+                        
+                        <table> <!--Pretendia hacer una tabla con la informacion del form, pero hay que usar PHP-->
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Comentario</th>
+                            <th>Fecha y hora</th>
+                        </table>
+                    </form>
+                </div>
+            </div>
+
+            <div class="hipermediaSection">
+                <header class="hipermediaSectionHeader">
+                    REPRODUCTOR
+                    <button class="plusBtn">+</button>
+                </header>
+                <div class="hipermediaSectionContent">
+                    <div class="videoPlayer">
+                        <video width="720" src="/media/I understand nothing.mp4"></video>
+
+                        <button class="playBtn">&#9658;</button>
+
+                        <div class="sliderBox">
+                            <div class="progressBar">
+                                <!--<button class="timeSlider">.</button>-->
+                            </div>
+                        </div>
+
+                        <div class="volumeSliderBox">
+                            <button class="muteBtn">🔊</button>
+                            <input type="range" name="volume" min="0" max="100">
+                        </div>
+
+                    </div>
+                    <script src="/js/videoPlayerControls.js"></script>
+                </div>
             </div>
         </section>
 
-        <section><!--Pragmatica-->
+        <section class="unactive"><!--Pragmatica-->
             <h1>APUNTES DE PRAGMÁTICA</h1>
         </section>
 
@@ -243,6 +319,9 @@
     <!--############## Termina el contenido de la pagina #################-->
 
     <!--############## Empieza el footer de la pagina #################-->
+    <footer id="footer">
+        <p>Autor: Ivan Montejo de Garcini<br>Elburgoimontejo@gmail.com</p>
+    </footer>
     <!--############## Termina el footer de la pagina #################-->
 </body>
 
@@ -253,8 +332,8 @@
         }
     })
     document.querySelectorAll('nav ul li div a').forEach(e => e.addEventListener('click', _ => change(e.dataset.id))) //añadp el evento tambien a los elementos del dropdown
+    
     document.querySelectorAll('main section div header button').forEach(e => {
-        console.log(e)
         e.addEventListener('click', _ => toggleDisplay(e))
     })
 
@@ -270,9 +349,9 @@
 
     function toggleDisplay(el){
         el.parentNode.parentNode.childNodes.forEach(element => {
-            if (element.tagName == 'P') {
+            if (element.className == 'hipermediaSectionContent') {
                 console.log(element.style.display)
-                if (element.style.display == 'none'){
+                if (element.style.display == 'none' || element.style.display === ""){
                     element.style.display = 'block'
                 } else{
                     element.style.display = 'none'
