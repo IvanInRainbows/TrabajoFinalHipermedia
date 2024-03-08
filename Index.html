@@ -285,6 +285,95 @@
 
             <div class="hipermediaSection">
                 <header class="hipermediaSectionHeader">
+                    SEMANA VI
+                    <button class="plusBtn">+</button>
+                </header>
+                <div class="hipermediaSectionContent">
+                    <h1>Atributos de posiciones: position</h1>
+                    <p>
+                        Hay cinco posibles valores: static|absolute|fixed|relative|sticky|initial|inherit
+                    </p>
+                    <style>
+                        table tr:nth-child(odd) td:nth-child(even), tr:nth-child(even) td:nth-child(odd){
+                            background-color: rgba(0, 0, 0, 0.1);
+                        }
+                    </style>
+                    <table>
+                        <th>Valor</th>
+                        <th>Descripcion</th>
+                        <tr>
+                            <td>static</td>
+                            <td>Valor por defecto. Los elementos se renderizan en el mismo orden en el que aparecen en el código</td>
+                        </tr>
+                        <tr>
+                            <td>absolute</td>
+                            <td>El elemento se posiciona relativo a su primer elemento ascendente (ancestro, emparentado) que no tiene posicion estática</td>
+                        </tr>
+                        <tr>
+                            <td>fixed</td>
+                            <td>El elemento se posiciona relativo a la ventana del navegador</td>
+                        </tr>
+                        <tr>
+                            <td>relative</td>
+                            <td>The element is positioned relative to its normal position, so "left:20px" adds 20 pixels to the element's LEFT position</td>
+                        </tr>
+                        <tr>
+                            <td>sticky</td>
+                            <td>
+                                The element is positioned based on the user's scroll position
+                                <br>A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>initial</td>
+                            <td>Sets this property to its default value.</td>
+                        </tr>
+                        <tr>
+                            <td>inherit</td>
+                            <td>Inherits this property from its parent element.</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <h1>Pseudoelementos</h1>
+                    <p>element: nth-child(i) n= teniendo un numero de hijos desde 0 a n, i es el elemento que queremos encontrar.
+                        <br>
+                        Sería como el
+                        i-abo elemento. Ejemplo, si tenemos 10 elementos e i==3 estamos seleccionando el tercer elemento hijo que es del tipo "element".
+                        También se pueden seleccionar solo los elementos pares o incluso cada N elementos (4n es cada cuatro elementos). 
+                        Esto se puede combinar como en la tabla de arriba para seleccionar, por ejemplo, los elementos pares hijos de los elementos 
+                        impares de los hijos de un elemento para hacer, por ejemplo, una seleccion tipo tablero de ajedrez tal y como aparece en la tabla de arriba.
+                        <br>
+                        Se puede ver como seleccionar elementos de cierto tipo/clase que cumplan la condicion del pseudoelemento
+                    </p>
+                    <style>
+                        ul li:nth-child(1){
+                            color: red;
+                        }
+                        ul li:last-child{
+                            color: blueviolet;
+                        }
+
+                        ul li:nth-child(3n){
+                            background-color: rgba(0, 0, 0, 0.1);
+                        }
+                    </style>
+                    Lista de ejemplo:
+                    <ul>
+                        <li>aaaa</li>
+                        <li>bbbb</li>
+                        <li>cccc</li>
+                        <li>dddd</li>
+                        <li>eeee</li>
+                        <li>ffff</li>
+                        <li>gggg</li>
+                        <li>hhhh</li>
+                        <li>iiii</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="hipermediaSection">
+                <header class="hipermediaSectionHeader">
                     REPRODUCTOR
                     <button class="plusBtn">+</button>
                 </header>
@@ -302,7 +391,11 @@
 
                         <div class="volumeSliderBox">
                             <button class="muteBtn">🔊</button>
-                            <input type="range" name="volume" min="0" max="100">
+                            <input type="range" name="volume" min="0" max="100" style="position: absolute; right: 5%;">
+                        </div>
+                        <div class="timejump">
+                            <button name="backward">&#60;&#60;10</button>
+                            <button name="forward">10&#62;&#62;</button>
                         </div>
 
                     </div>

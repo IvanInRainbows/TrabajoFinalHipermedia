@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Establece la tabla de caracteres para el documento -->
+		<meta charset="utf-8">
+		
+		<!-- Es aconsejable que todos los documentos HTML lleven su correspondiente etiqueta <title</title> -->
+		<title>
+			Ejercicio-01-Formulario
+		</title>
+		
+		<!-- Empiezan los estilos de la página -->
+		<style>
+			/* RESET DE PROPIEDADES */
+			html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+			  margin: 0;
+			  padding: 0;
+			  border: 0;
+			  
+			  font-size: 100%;
+			  font: inherit;
+			  vertical-align: baseline;
+			  
+			  outline: none;
+			  -webkit-box-sizing: border-box;
+			  -moz-box-sizing: border-box;
+			  box-sizing: border-box;
+			}
+
+			/* ESTILOS PARA LA VENTANA DEL NAVEGADOR */
+			html {
+				width: 100%;
+				height: 100%;
+				min-height: 100%;
+			}
+
+			/* ESTILOS PARA EL BODY */
+			body { 
+				width: 100%;
+				height: 100%;
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				color: #000;
+				background-color: #fff;
+				overflow: hidden;
+			}
+			
+			/* ESTILOS PARA EL CONTENEDOR PRINCIPAL */
+			.container-wrap {
+				width: 95%;
+				height: auto;
+				padding: 20px 0px;
+				min-height: 100px;
+				margin: 20px auto;
+				background-color: rgb(242, 242, 242);
+			}
+			
+			#exercise-wrap {
+				width: 95%;
+				height: auto;
+				margin: 10px auto;
+				min-height: 430px;
+				padding: 5px;
+				border: 2px dashed blue;
+			}
+			
+			#enunciado, #datos {
+				width: 99%;
+				height: auto;
+				line-height: 30px;
+				margin: 5px auto;
+				padding: 5px;
+				border: 1px solid rgb(175, 175, 175);
+				background-image: linear-gradient(to bottom, rgb(220,220,220), rgb(240,240,240));
+				color: #ff5500;
+				text-align: left;
+				vertical-align: middle;
+			}
+		
+			#datos {
+				list-style-type: square;
+				list-style-position: inside;
+				padding-left: 15px;
+			}
+			
+			#enunciado {
+				text-align: left;
+				color: #1a9a4f;
+				line-height: 20px;
+			}
+			
+			#resultado {
+				width: 90%;
+				height: 500px;
+				border: 1px solid #777;
+				margin: 0 auto;
+				background-image: url(background-img.jpg);
+				box-shadow: 0 0 8px #888;			
+			}
+			
+			.color-colors {
+				color: fuchsia;
+			}
+
+			#resultado div{
+				border: solid gray 3px;
+				margin: 5px;
+				padding: 5px;
+			}
+
+			.datos div div{
+				border: solid gray 3px;
+				margin: 5px;
+				padding: 5px;
+			}
+
+			.inputBgBlue{}
+
+			.inputBgBlue input, option{
+				background-color: #D8F4FE;
+			}
+
+			.inputBgGreen{}
+
+			.inputBgGreen input, option{
+				background-color: #EAFFD5;
+			}
+			
+			/* ESPACIO PARA LOS ESTILOS DEL EJERCICIO NÚMERO 01 */			
+
+			/* FIN DE LOS ESTILOS PARA EL EJERCICIO NÚMERO 01 */
+			
+		</style>
+		<!-- Terminan los estilos de la página -->		
+	</head>
+	
+	<!-- Empieza el body -->
+	<body>
+		
+		<div class="container-wrap">
+			<section id="exercise-wrap">			
+				<!-- Ejercicio número 01 -->
+				<div id="enunciado">
+					<span style="font-weight: bold; color: blue;">Ejercicio núm. 01:</span> Formulario incompleto con inputs de distinto tipo.  
+				</div>
+				
+				<ul id="datos">
+					<li>
+						<span class="data-names" style="color:blue; font-weight: bold;">HTML:</span> No hay indicaciones expresas, pero, como siempre, el resultado debe ser al menos bastante aproximado al de la imagen. 
+					</li>
+					<li>
+						<span class="data-names" style="font-weight: bold;">CSS:</span> Colores: <span class="color-colors">#FFFFDD, #EAFFD5, #D8F4FE, #84C1FF</span>.
+					</li>
+				</ul>
+
+				<!-- ESPACIO PARA EL CÓDIGO HTML DEL EJERCICIO NÚMERO 01 -->
+				<div id="resultado">
+					<div name="all" style="position: relative;">
+						<div name="datos" class="datos">
+							<div style="color: blue;">
+								<form action="" class="inputBgBlue">
+									<label for="participante">Participante: </label>
+									<select name="participante" id="1">
+										<option value="p1">P1</option>
+										<option value="p2">P2</option>
+										<option value="p3">P3</option>
+										<option value="p4">P4</option>
+										<option value="p5">P5</option>
+									</select>
+
+									<label for="npar">de</label>
+									<select name="npar" id="2">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+									</select>
+
+									<label for="nombreapellido">Apellido/s, Nombre</label>
+									<input type="text" name="nombreapellido" id="3">
+
+									<label for="edad">edad</label>
+									<input type="number">
+								</form>
+							</div>
+
+							<div name="origen" style="color: green;" class="inputBgGreen">
+								<label for="origen" style="position: relative; top: -14px; background-image: url(background-img.jpg); color: black;">Origen</label><br>
+								<label for="pais">País: </label>
+									<select name="pais" id="">
+										<option value="es">España</option>
+										<option value="en">Inglaterra</option>
+										<option value="gr">Alemania</option>
+										<option value="fr">Francia</option>
+										<option value="it">Italia</option>
+									</select>
+
+								<label for="region">Región: </label>
+								<input type="text" name="region" id="">
+
+								<label for="Provincia">Provincia: </label>
+								<input type="text" name="provincia" id="">
+
+								<label for="poblacion">Población: </label>
+								<input type="text" name="poblacion" id="">
+								
+							</div>
+
+							<div name="vidaenespana" style="display: inline-block; width: 23.9%;color: blue; ">
+								<label for="vidaenespana" style="position: relative; top: -14px; background-image: url(background-img.jpg); color: #000;">Vida en España</label><br>
+								<label for="anos">Años: </label>
+								<input type="number" name="anos" id="" size="5">
+
+								<label for="meses">Meses: </label>
+								<input type="number" name="meses" id="" size="5">
+							</div>
+
+							<div name="vidaenmadrid" style="display: inline-block; width: 23.9%; color:blue;">
+								<label for="vidaenmadrid" style="position: relative; top: -14px; background-image: url(background-img.jpg); color: #000;">Vida en Madrid</label><br>
+								<label for="anos">Años: </label>
+								<input type="number" name="anos" id="" size="5">
+
+								<label for="meses">Meses: </label>
+								<input type="number" name="meses" id="" size="5">
+							</div>
+
+							<div name="lenguas" style="display: inline-block; width: 48.95%; color: blue;">
+								<label for="lengua" style="position: relative; top: -14px; background-image: url(background-img.jpg); color: #000;">Lenguas</label><br>
+								<label for="materna">Materna: </label>
+								<select name="materna" id="">
+									<option value="es">Español</option>
+									<option value="en">Inglés</option>
+									<option value="gr">Alemán</option>
+									<option value="fr">Francés</option>
+								</select>
+
+								<label for="materna">Segunda: </label>
+								<select name="materna" id="">
+									<option value="es">Español</option>
+									<option value="en" selected = "selected">Inglés</option>
+									<option value="gr">Alemán</option>
+									<option value="fr">Francés</option>
+								</select>
+							</div>
+
+							<div name="datosLoc" style="width: 48.9%;display: inline-block; color: blue;">
+								<label for="datoslocalizacion" style="position: relative; top: -14px; background-image: url(background-img.jpg); color: #000;">Datos de localización</label><br>
+								<label for="email">Email: </label>
+								<input type="text" name="email" id="">
+
+								<label for="tlf">Telefono: </label>
+								<input type="text" name="email" id="">
+							</div>
+
+							<div name="transcrpicion" style="width: 49%; display: inline-block; color: blue;" class="inputBgBlue">
+								<label for="transc" style="position: relative; top: -14px; background-image: url(background-img.jpg); color: #000;">Transcrpición (hh : mm : ss)</label><br>
+								<label for="de">De</label>
+								<input type="number" name="h" id=""size="5">
+								<input type="number" name="m" id=""size="5">
+								<input type="number" name="s" id=""size="5">
+								<label for="a">a</label>
+								<input type="number" name="h" id=""size="5">
+								<input type="number" name="m" id=""size="5">
+								<input type="number" name="s" id=""size="5">
+								<button>00</button>
+							</div>
+
+							<label for="temas" style="margin: 10px; color: blue;">Temas: </label>
+							<input type="text" name="temas" id="" style="background-color: #D8F4FE; width: 90%;">
+
+						</div>
+						<div name="notas" style="display: inline-block; width: 73%; height: 28%;" class="inputBgBlue">
+							<label for="notasPar" style="position: relative; top: -15px; background-image: url(background-img.jpg);">Notas a los datos del participante</label>
+							<input type="text" style="width: 95%; height: 79%;">
+						</div>
+						<div name="anadirNota"style="display: inline-block; width: 24%; vertical-align: top;">
+							<label for="anadirnota" style="position: relative; top: -15px; background-image: url(background-img.jpg);">Añadir nota</label> <br>
+							<select name="notat" id="" size="5">
+								<option value="apellido">Apellido/s, Nombre</option>
+								<option value="edad">Edad</option>
+								<option value="OrigenPa">Origen-País</option>
+								<option value="OrigenR">Origen-región</option>
+								<option value="OrigenPa">Origen-Provincia</option>
+								<option value="OrigenPo">Origen-Población</option>
+								<option value="anosespana">Años en España</option>
+								<option value="mesesespana">Meses en España</option>
+								<option value="anosmadrid">Años en Madrid</option>
+								<option value="mesesmadrid">Meses en Madrid</option>
+							</select>
+						</div>
+						<button style="position: relative;left: 45%;width: 10%; margin: 0%; padding: 0%;height: 7%;">Aceptar</button>
+						<button style="position: relative;left: 45%;width: 10%; margin: 0%; padding: 0%; height: 7%;">Cancelar</button>
+						<button id="button-close" onclick="fCerrar()">X</button>
+						<script>
+							function fCerrar(){
+								document.getElementById("button-close").parentNode.style.display = "none";
+							}
+						</script>
+					</div>
+				</div>
+				<!-- FIN DEL CÓDIGO HTML DEL EJERCICIO NÚMERO 01 -->
+				
+			</section>											
+		</div>
+		<!-- Termina la div que envuelve todo el contenido -->
+		<style>
+			#button-close{
+				position: absolute;
+				color: white;
+				width: 32px;
+				height: 32px;
+				border-radius: 50%;
+				border: 1px solid #ababab;
+				box-shadow: 0 0 6px #ababab;
+				text-align: center;
+				line-height: 28px;
+				background: rgb(255, 0, 0);
+				top: -16px;
+				right: -16px;
+				cursor: pointer;
+				opacity: 0.2;
+			}
+
+			#button-close:hover{
+				background: rgb(255, 0, 0);
+				opacity: 1;
+			}
+		</style>
+	</body>
+	<!-- Termina el body -->
+</html>
+

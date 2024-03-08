@@ -183,6 +183,17 @@ nav img{ /*Propiedades de la imagen dentro de la barra de navegacion*/
     margin: 5px;
 }
 
+table{
+    border-collapse: collapse;
+}
+
+td, th{
+    padding: 3px;
+    border: solid 3px rgba(0,0,0,0.3);
+    margin: 0px;
+    text-align: left;
+}
+
 /*################# CLASES PARA EL REPRODUCTOR DE VIDEO #########################*/
 
 .videoPlayer{
@@ -233,10 +244,29 @@ nav img{ /*Propiedades de la imagen dentro de la barra de navegacion*/
     left: 5%;
     top: 94%;
     height: 20px;
+    width: 28%;
 }
 
 .muteBtn {
+    position: absolute;
     background-color: rgba(0,0,0,0.2);
+    background: none;
+    border: none;
+    top: 0%;
+}
+
+.timejump {
+    position: absolute;
+    left: 35%;
+    bottom: 1%;
+}
+
+.timejump button{
+    font-family: "roboto";
+    color: red;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 /*################# FIN DE CLASES PARA EL REPRODUCTOR DE VIDEO #########################*/

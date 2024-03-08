@@ -3,7 +3,11 @@ const playBtn = document.querySelector(".playBtn");
 const video = document.querySelector("video");
 const progBar = document.querySelector(".progressBar");
 const sliderBox = document.querySelector(".sliderBox");
-const volSlider = document.querySelector("input[name='volume']")
+const volSlider = document.querySelector("input[name='volume']");
+const jumpForward = document.querySelector(".timejump button[name='forward']");
+const jumpBackward = document.querySelector(".timejump button[name='backward']");
+const muteBtn = document.querySelector(".muteBtn");
+let volumePremute = 0;
 
 //################## FUNCIONES ###################
 
@@ -24,6 +28,25 @@ function scrub(e){ //para detectar el tiempo al que hay que saltar tambien hacem
     video.currentTime = (e.offsetX / sliderBox.offsetWidth) * video.duration;
 }
 
+function timeJump (isForward){
+    if(isForward){
+        video.currentTime += 1;
+    }else{
+        video.currentTime -= 1;
+    }
+}
+
+function mute(){
+    if (video.volume != 0){
+        volumePremute = video.volume;
+        video.volume = 0;
+        volSlider.value = 0;
+    } else{
+        video.volume = volumePremute;
+        volSlider.value = volumePremute*100;
+    }
+}
+
 //################# EVENTOS #####################
 
 volSlider.addEventListener("input", () => {video.volume = volSlider.value/100;}); //Evento de slider de volumen
@@ -34,6 +57,9 @@ video.addEventListener("timeupdate", progressUpdate);
 
 video.addEventListener("pause", () => {playBtn.innerHTML = "\u23F5";});//Cambios de los iconos de play y pause
 video.addEventListener("play", () => {playBtn.innerHTML = "\u23F8";});
+jumpBackward.addEventListener("click", () => {timeJump(0)});
+jumpForward.addEventListener("click", () => {timeJump(1)});
+muteBtn.addEventListener("click", mute);
 
 
 //Esto de abajo es el scrubber, para que puedas pinchar y arrastrar para seleccionar la parte del video que ver
