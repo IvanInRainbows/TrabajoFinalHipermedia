@@ -134,44 +134,16 @@
                 <h1>De Garcini</h1>
                 <h2 style="font-size: 20px;">desarrollador de videojuegos y lingüísta computacional</h2>
             </div>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel
-                viverra tellus. Duis vitae urna vitae leo aliquam consequat. Integer eu
-                metus tempus, gravida ante vel, ultricies libero. Mauris id lobortis arcu.
-                Vivamus euismod augue nisi, vitae euismod lorem mattis et. Nulla facilisi.
-                Mauris ac tincidunt arcu. Sed id felis a diam dapibus auctor. Curabitur
-                nec porta erat. Praesent vitae purus et justo dapibus consequat at at
-                odio. Praesent et erat consequat, tristique lacus eget, auctor nisl.
-                Quisque vel feugiat elit. Maecenas placerat orci vitae diam ultrices
-                mollis. Duis tortor eros, fermentum dignissim volutpat eu, malesuada quis
-                lacus. Integer quis urna a ante euismod aliquam a vel felis. Quisque
-                elementum, magna nec ultrices porta, augue nunc feugiat leo, quis iaculis
-                justo ante posuere mi. Curabitur sit amet erat eros. Suspendisse nec leo
-                ultricies, iaculis metus a, scelerisque urna. Nam eget lobortis tortor.
-                Sed bibendum tristique placerat. Nam ut leo felis. In hac habitasse platea
-                dictumst. Maecenas mollis, risus ac fringilla gravida, felis sem fermentum
-                magna, in mollis urna odio non turpis. Vivamus ut diam vulputate,
-                consequat dolor ac, rhoncus nunc. Praesent faucibus ornare eleifend. Donec
-                tempor id dui ornare suscipit. Cras a aliquet ex, sed iaculis leo. Nunc
-                vel tristique diam. In porttitor lacus et ultrices auctor. Nulla erat ex,
-                faucibus id sem eu, euismod tincidunt enim. Aliquam sit amet nisl velit.
-                Aenean massa libero, egestas et est nec, pellentesque mattis risus.
-                Phasellus efficitur cursus ipsum, eget pharetra neque vestibulum eget. Ut
-                malesuada elit eget pellentesque tincidunt. Nullam at sodales felis, at
-                ultricies nisi. Nullam pulvinar sodales purus, a facilisis mi mollis ut.
-                Donec lacinia, dolor quis suscipit venenatis, ipsum est volutpat lorem, a
-                ornare sem ligula vitae nulla. Praesent posuere lectus fermentum velit
-                ornare posuere. Donec ut fermentum nisi. Proin ac arcu in lacus blandit
-                gravida. Proin maximus gravida lorem, et malesuada justo suscipit ac.
-                Nulla in hendrerit risus. Proin fringilla vel odio quis vestibulum.
-                Aliquam nec eleifend nibh, vel dignissim neque. Cras varius dui vel
-                eleifend consectetur. Nulla consequat, lorem at varius tincidunt, ex dolor
-                dapibus augue, eu molestie mi dui at libero. Nunc ut viverra lacus. Donec
-                tempus gravida felis eu tincidunt. Phasellus suscipit erat eget tortor
-                dictum, vel elementum turpis varius. Aliquam erat volutpat. Orci varius
-                natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                Sed elementum lectus at nulla viverra lobortis.
-            </p>
+            <div class="grid2col">
+                <div style="grid-column: 1; grid-row: 1;">
+                    <h1>Prueba</h1>
+                    <p>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
+                    </p>
+                </div>
+                <img src="img/freepik-nature-01.jpg" style="grid-column: 2; grid-row: 1;" alt="">
+            </div>
+            
         </section>
         <!--############### CONTACTO #################-->
         <section class="unactive">
@@ -294,11 +266,11 @@
                         Hay cinco posibles valores: static|absolute|fixed|relative|sticky|initial|inherit
                     </p>
                     <style>
-                        table tr:nth-child(odd) td:nth-child(even), tr:nth-child(even) td:nth-child(odd){
+                        .table-test tr:nth-child(odd) td:nth-child(even), tr:nth-child(even) td:nth-child(odd){
                             background-color: rgba(0, 0, 0, 0.1);
                         }
                     </style>
-                    <table>
+                    <table class="table-test">
                         <th>Valor</th>
                         <th>Descripcion</th>
                         <tr>
@@ -346,19 +318,19 @@
                         Se puede ver como seleccionar elementos de cierto tipo/clase que cumplan la condicion del pseudoelemento
                     </p>
                     <style>
-                        ul li:nth-child(1){
+                        .ul-pseudoel-test li:nth-child(1){
                             color: red;
                         }
-                        ul li:last-child{
+                        .ul-pseudoel-test li:last-child{
                             color: blueviolet;
                         }
 
-                        ul li:nth-child(3n){
+                        .ul-pseudoel-test li:nth-child(3n){
                             background-color: rgba(0, 0, 0, 0.1);
                         }
                     </style>
                     Lista de ejemplo:
-                    <ul>
+                    <ul class="ul-pseudoel-test">
                         <li>aaaa</li>
                         <li>bbbb</li>
                         <li>cccc</li>
@@ -383,19 +355,103 @@
                             position: relative;
                             display: inline-block;
                             margin: 10px;
+                            margin-top: 70px;
                             border: solid black 2px;
                             width: 300px;
                             height: 200px;
                         }
                         .degradado p{
                             position: absolute;
-                            top: -5%;
+                            top: -40%;
+                        }
+
+                        .espana{
+                            background-image: linear-gradient(to bottom, red 0%, red 25%, gold 25%, gold 75%, red 75%, red 100%);
                         }
                     </style>
                     <h1>Degradados</h1>
                     <div class="degradado" style="background-image: linear-gradient(to right, #0100f2, rgb(255,255,255), #f60100);">
+                        <p>background-image: linear-gradient(to right, #0100f2, rgb(255,255,255), #f60100);</p>
                     </div>
-                    <div class="degradado" style="background-image: linear-gradient(to right, #0100f2 0%, #0100f2 33%, rgb(255,255,255) 33%, rgb(255,255,255) 66%, #f60100) 66%;">
+                    <div class="degradado" style="background-image: linear-gradient(to right, #0100f2 0%, #0100f2 33.33%, rgb(255,255,255) 33.33%, rgb(255,255,255) 66.66%, #f60100 66.66%, #f60100 66.66%);">
+                        <p>background-image: linear-gradient(to right, #0100f2 0%, #0100f2 33.33%, rgb(255,255,255) 33.33%, rgb(255,255,255) 66.66%, #f60100 66.66%, #f60100 66.66%);</p>
+                    </div>
+                    <div class="degradado" style="background-image: linear-gradient(45deg, #0100f2 0%, #0100f2 33.33%, rgb(255,255,255) 33.33%, rgb(255,255,255) 66.66%, #f60100 66.66%, #f60100 66.66%);">
+                        <p>background-image: linear-gradient(45deg, #0100f2 0%, #0100f2 33.33%, rgb(255,255,255) 33.33%, rgb(255,255,255) 66.66%, #f60100 66.66%, #f60100 66.66%);</p>
+                    </div>
+                    <div class="degradado espana">
+                        <p>background-image: linear-gradient(to bottom, red 0%, red 25%, gold 25%, gold 75%, red 75%, red 100%);</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hipermediaSection">
+                <header class="hipermediaSectionHeader">
+                    SEMANA VIII
+                    <button class="plusBtn">+</button>
+                </header>
+                <div class="hipermediaSectionContent">
+                    <style>
+                        .test-flex {
+                            position: relative;
+                            border: solid 5px #0100f2;
+                            background-color: azure;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-around;
+                            height: 200px;
+                            width: 340px;
+                        }
+
+                        .test-grid {
+                            position: relative;
+                            border: solid 5px #0100f2;
+                            background-color: azure;
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            grid-gap: 5px;
+                            grid-auto-rows: minmax(20px, auto);
+                            height: 200px;
+                            width: 340px;
+                        }
+
+                        .testcell{
+                            border: blueviolet solid 3px;
+                            background-color: transparent;
+                        }
+
+                        .testTx {
+                            height: 20px;
+                            margin: 5px;
+                            padding: 5px;
+                            border: solid 4px blueviolet;
+                        }
+                    </style>
+                    <h1>Tipos de display</h1>
+                    <p> El atributo display puede ser de muchas maneras, las principales que vamos a usar son "block", "inline-block", "inline", 
+                        "flex", "justify-content" y "align-items". Tambien hay otro para hacer que los elementos se maqueten como si estuvieran en una 
+                        tabla. Tambien esta el atributo "grid", que crean una especie de estructura parecida a una tabla invisible para poder maquetarlo.
+                        Incluso se pueden superponer y extender igual que en tkinter.
+                    </p>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+                        <div class="test-flex">
+                            <div class="testTx">Test1</div>
+                            <div class="testTx">Test2</div>
+                            <div class="testTx">Test3</div>
+                            <div class="testTx">Test4</div>
+                            <div class="testTx">Test5</div>
+                            <p style="bottom: 0%; position: absolute; right: 0%; color: rgba(0, 0, 0, 0.3);">Flex</p>
+                        </div>
+                        <div class="test-grid">
+                            <div class="testcell" style="grid-row: 1; grid-column: 1;">1, 1</div>
+                            <div class="testcell" style="grid-row: 1; grid-column: 2/4;">2-3, 1</div>
+                            <div class="testcell" style="grid-row: 2; grid-column: 1;">1, 2</div>
+                            <div class="testcell" style="grid-row: 2; grid-column: 2;">2, 2</div>
+                            <div class="testcell" style="grid-row: 3; grid-column: 2/4;">2-3, 2</div>
+                            <div class="testcell" style="grid-row: 3/5; grid-column: 1;">1, 3-4</div>
+                            <div class="testcell" style="grid-row: 1/5; grid-column: 3;">3, 1-4</div>
+                            <p style="bottom: 0%; position: absolute; right: 0%; color: rgba(0, 0, 0, 0.3);">Grid</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -430,6 +486,7 @@
                     <script src="/js/videoPlayerControls.js"></script>
                 </div>
             </div>
+            
         </section>
 
         <section class="unactive"><!--Pragmatica-->

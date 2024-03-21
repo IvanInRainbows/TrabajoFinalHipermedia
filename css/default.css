@@ -99,6 +99,21 @@ main section{
     font-size: 110px;
 }
 
+.grid2col{
+    margin-top: 100px;
+    position: relative;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 35%;
+    grid-gap: 80px;
+    grid-auto-rows: minmax(200px, auto);
+}
+
+.grid2col *{
+    right: 0%;
+    text-align: center;
+}
+
 .dropdown{ /*Propiedades generales del elemento de la lista desordenada que contiene el dropdown*/
     position: relative;
     display: inline-block;
