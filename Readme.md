@@ -3,6 +3,8 @@ En este repositorio voy a guardar el trabajo final de tecnologias hipermedia, el
 
 # Changelog
 
+05/04/2024: Añadidos apuntes des listas ordenadas y desordenadas y de tablas con algunas de sus propiedades mas utiles.
+
 21/03/2024: Añadidos apuntes de la semana VIII y VI, estos contienen los temas de gestion del fondo (Background, linear gradients...) y y los tipos de valores de el atributo display, con ejemplos del grid y de flex. Solucionado el bug por el que el css integrado en una de las secciones de hipermedia interferia con la barra de navegacion, habia modificado como se comportaban las listas desordenadas y se habia aplicado a todo el documento. Aplicado el grid a la pantalla de contacto para probar.
 
 08/03/2024: Añadida la funcionalidad al reproductor de saltar tiempo (salta 1 segundo porque el vidoe es muy corto) hacia atras y hacia delante. Añadida la funcionalidad del boton de mute y recolocados los elemenmtos del slider de volumen t del boton de mutear. Añadidos apuntes de la semana VI. tambien he puesto el archivo del ejercicio de la semana pasada con el que estamos trabajando.

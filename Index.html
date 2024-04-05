@@ -458,6 +458,157 @@
 
             <div class="hipermediaSection">
                 <header class="hipermediaSectionHeader">
+                    SEMANA IX
+                    <button class="plusBtn">+</button>
+                </header>
+                <div class="hipermediaSectionContent">
+                    <style>
+                        .horizontalList{
+                            display: flex;
+                            max-width: 1000px;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                        }
+                        .horizontalList li{
+                            border: solid rgb(100,130,255);
+                            padding: 3px;
+                            list-style-type: none;
+                            transition: ease-out 0.3s;
+                        }
+
+                        .horizontalList li:hover{
+                            transition: ease-out 0.3s;
+                            background-color: rgba(0, 0, 0, 0.1);
+                            cursor: pointer;
+                        }
+                        .vlist {
+
+                        }
+
+                        .vlist li ul{
+                            list-style-type: upper-roman;
+                            transition: ease-out 0.3s;
+                            background-color: transparent;
+                        }
+
+                        .vlist li:hover {
+                            transition: ease-out 0.3s;
+                            background-color: rgba(0, 0, 0, 0.1);
+                            cursor: pointer;
+                        }
+
+                        dl dt{
+                            list-style-type: disc;
+                        }
+
+                    </style>
+                    <h1>Listas</h1>
+                    Hay listas ordenadas:
+                    <ol>
+                        <li>Elemento 1</li>
+                        <li>Elemento 2</li>
+                        <li>Elemento 3</li>
+                    </ol>
+                    Y listas desordenadas
+                    <ul>
+                        <li>Elemento 1</li>
+                        <li>Elemento 2</li>
+                        <li>Elemento 3</li>
+                    </ul>
+                    Tambien se pueden poner listas en horizaontal poniendo los elementos como inline-block o como flex. Se puede tambien usar
+                    "transition:ease-out <span style="color: rgb(0,0,150);">[float|int]</span>s" para poner un tiempo de transicion entre el 
+                    estado al que cambia al hacer un hover y eso, se puede poner en la propia clase para la transicion de vuelta o en el 
+                    pseudoelemento para la transicion de "ida":
+                    <ul class="horizontalList">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                        <li>SQL</li>
+                    </ul>
+                    Lista vertical:
+                    <ul class="vlist">
+                        <li>Elemento 1</li>
+                        <li>Elemento 2</li>
+                        <li>Elemento 3</li>
+                        <li>
+                            <ul>
+                                <li>Elemento 1</li>
+                                <li>Elemento 2</li>
+                                <li>Elemento 3</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    la etiqueta "dl" se usa para listas de datos que dentro tienen terminos y descriptores
+                    <dl>
+                        <dt>El1
+                            <dl>adgsrgsr</dl>
+                        </dt>
+                        <dt>El2
+                            <dl>aasgadsfdgjf</dl>
+                        </dt>
+                        <dt>El3
+                            <dl>qwertyuiop</dl>
+                        </dt>
+                    </dl>`
+
+                    <h1>Tablas</h1> 
+                    <style>
+                        tr th{
+                            background-color: rgba(0, 70, 200, 0.2);
+                        }
+
+                        .checkerTable{
+
+                        }
+
+                        .checkerTable tr:nth-child(odd) td:nth-child(even), tr:nth-child(even) td:nth-child(odd){
+                            background-color: rgba(0, 0, 0, 0.1);
+                        }
+                    </style>
+                    <table class="checkerTable">
+                        <tr> 
+                            <th style="border: none; background: transparent;">x_i_j</th>
+                            <th>x_i_1</th>
+                            <th>x_i_2</th>
+                            <th>x_i_3</th>
+                            <th>x_i_4</th>
+                        </tr>
+                        <tr>
+                            <th>x_1_j</th>
+                            <td>x_1_1</td>
+                            <td>x_1_2</td>
+                            <td>x_1_3</td>
+                            <td>x_1_4</td>
+                        </tr>
+                        <tr>
+                            <th>x_2_j</th>
+                            <td>x_2_1</td>
+                            <td>x_2_2</td>
+                            <td>x_2_3</td>
+                            <td>x_2_4</td>
+                        </tr>
+                        <tr>
+                            <th>x_3_j</th>
+                            <td>x_3_1</td>
+                            <td>x_3_2</td>
+                            <td>x_3_3</td>
+                            <td>x_3_4</td>
+                        </tr>
+                        <tr>
+                            <th>x_4_j</th>
+                            <td>x_4_1</td>
+                            <td>x_4_2</td>
+                            <td>x_4_3</td>
+                            <td>x_4_4</td>
+                    </table>
+
+                </div>
+            </div>
+
+            <div class="hipermediaSection">
+                <header class="hipermediaSectionHeader">
                     REPRODUCTOR
                     <button class="plusBtn">+</button>
                 </header>
