@@ -67,6 +67,7 @@ main{ /*Contenidos de la pagina, por debajo de navbar*/
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 8%;
+    padding-bottom: 40px;
     background-color: var(--bgColor);
     min-height: 1800px;
     z-index: 1;
@@ -168,6 +169,7 @@ nav img{ /*Propiedades de la imagen dentro de la barra de navegacion*/
 .hipermediaSection {
     margin-right: 5%;
     margin-top: 15px;
+    margin-bottom: 30px;
     padding: 10px;
     border: solid 3px rgba(0, 81, 255, 0.2);
 }

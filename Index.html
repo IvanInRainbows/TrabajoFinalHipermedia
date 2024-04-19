@@ -129,15 +129,15 @@
         <section class="unactive">
             <img src="img/IvanIMG.jpg" style="height: 40%; width: 40%; display: inline-block;" alt="">
             <div class="titles">
-                <h1>Ivan</h1>
+                <h1>Iván</h1>
                 <h1>Montejo</h1>
                 <h1>De Garcini</h1>
-                <h2 style="font-size: 20px;">desarrollador de videojuegos y lingüísta computacional</h2>
+                <h2 style="font-size: 20px;">Desarrollador de videojuegos y lingüísta computacional</h2>
             </div>
             <div class="grid2col">
                 <div style="grid-column: 1; grid-row: 1;">
-                    <h1>Prueba</h1>
-                    <p>
+                    <h1 style="text-align: right;">Prueba</h1>
+                    <p style="text-align: right;">
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
                     </p>
                 </div>
@@ -198,6 +198,7 @@
         
         <section class="active"><!--Hipermedia-->
             <h1>APUNTES DE HIPERMEDIA</h1>
+            <h2><a href="#Reproductor" target="_self">Reproductor</a></h2>
 			<div class="hipermediaSection">
                 <header class="hipermediaSectionHeader">
                     SEMANA I
@@ -609,13 +610,186 @@
 
             <div class="hipermediaSection">
                 <header class="hipermediaSectionHeader">
+                    SEMANA X
+                    <button class="plusBtn">+</button>
+                </header>
+                <div class="hipermediaSectionContent">
+                    <h1>Tablas parte 2</h1>
+                    <table class="checkerTable">
+                        <tr> 
+                            <th style="border: none; background: transparent;">x_i_j</th>
+                            <th>x_i_1</th>
+                            <th>x_i_2</th>
+                            <th>x_i_3</th>
+                            <th>x_i_4</th>
+                        </tr>
+                        <tr>
+                            <th>x_1_j</th>
+                            <td>x_1_1</td>
+                            <td>x_1_2</td>
+                            <td>x_1_3</td>
+                            <td>x_1_4</td>
+                        </tr>
+                        <tr>
+                            <th>x_2_j</th>
+                            <td>x_2_1</td>
+                            <td>x_2_2</td>
+                            <td>x_2_3</td>
+                            <td>x_2_4</td>
+                        </tr>
+                        <tr>
+                            <th>x_3_j</th>
+                            <td>x_3_1</td>
+                            <td>x_3_2</td>
+                            <td>x_3_3</td>
+                            <td>x_3_4</td>
+                        </tr>
+                        <tr>
+                            <th>x_4_j</th>
+                            <td>x_4_1</td>
+                            <td>x_4_2</td>
+                            <td>x_4_3</td>
+                            <td>x_4_4</td>
+                    </table>
+
+                    <p>
+                        La etiqueta "thead" designa la cabecera de la tabla, pero al parecer no aplica ningun estilo, para eso se usa "th". <br>
+                        la etiqueta "colgroup" se usa para dar un estilo a toda una columna. Se aplica de forma que la etiqueta "col" 
+                        que se pone dentro de la etiqueta se aplica a la primera columna de la tabla. Col(1) se aplica a x_1_1...x_i_1,
+                        es decir, col(j) -> x_1_j ... x_i_j. Se puede usar span para extender su rango d eaplicacion a mas de una columna contigua
+                    </p>
+                    <style>
+                        .tablaSX1{
+                            min-width: 300px;
+                        }
+
+                        .tablaSX1 th{
+                            height: 40px;
+                            min-width: 80px;
+                            background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3));
+                        }
+
+                        .tablaSX1 tr td:last-child{
+                            color: #f60100;
+                            text-align: right;
+                        }
+                    </style>
+                    <table class="tablaSX1">
+                        <thead>
+                            <colgroup>
+                                <col span="1" style="background-color: rgba(255, 0, 0, 0.1);">
+                            </colgroup>
+                            <tr>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>123</td>
+                                <td>456</td>
+                                <td>789</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Cuando se introduce una tabla en un contenedor se le deberia poner a este contenedor el atributo "overflow-y: ".
+                        Esto es para controlar el desbordamiento (que el contenido sea mas grande que el contenedor),
+                        podemos poner tanto en x como en y y ponerle que haya una barra de scroll y cosas asi. "colspan" y "rowspan" para 
+                        expandir una columna o fila a varias <br></p>
+                    <h1>Etiquetas multimedia</h1>
+                    <p>Las etiquetas multimedia se usan para introducir, valga la redundancia, archivos multimedia de audio, video, etc.
+                        Al igual que el resto de etiquetas tambien pueden llevar atributos, algunos exigen valores pero tambien pueden ser 
+                        booleanos y que solo sea necesario poner el nombre del atributo, por ejemplo, "autoplay", "loop" o "controls". 
+                        Las etiquetas multimedia requieren de una fuente o source (atributo src o con otra etiqueta dentro de la etiqueta 
+                        correspondiente que sea "source").
+                    </p>
+                    <audio controls autoplay loop>
+                        <source src="media/houseofcards.mp3">
+                    </audio>
+                </div>
+            </div>
+
+            <div class="hipermediaSection">
+                <header class="hipermediaSectionHeader">
+                    SEMANA XI
+                    <button class="plusBtn">+</button>
+                </header>
+                <div class="hipermediaSectionContent">
+                    <h1>Etiquetas multimedia, continuación</h1>
+                    <p>
+                        Se puede poner fondo al audio tambien, en el siguiente audio lo improviso con css con el atributo background-image y
+                        varios atributos
+                    </p>
+                    <audio controls autoplay loop style="background-image: url(img/IR.jpg); width: 300px; height: 300px; background-size: 300px;">
+                        <source src="media/houseofcards.mp3">
+                    </audio>
+                    <h1>JavaScript</h1>
+                    <p>
+                        Javascript es un lenguaje de OOP interpretado y esas cosas. PAra escribir algo en el documento html se usa 
+                        document.write(). En las listas no se puede acceder al indice #-1 de una lsitab para acceder al ultimo como 
+                        en python.
+                    </p>
+                    <script>
+                        document.write("Hola, mundo");
+                        let lista = [1,2,3,4,5,6,7];
+                        document.write(lista[6]);
+                        document.write("<br>");
+                        document.write("El sexto elemento de la lista es un "+typeof(lista[6]))
+                        lista[6] = "hola"
+                        document.write("<br>El sexto elemento de la lista es un " + typeof(lista[6]))
+                    </script>
+                    <p>
+                        Se supone que a la hora de nombrar las variables la convencion es que empiecen con la inicial de su tipo, pero 
+                        ¿Que sentido tiene hacerlo en un lenguaje con tipado dinamico?
+                    </p>
+                    <script>
+                        let nMiLet = 0;
+                        var nMiVar = 1;
+                        document.write("<br>nMiLet = "+nMiLet);
+                        document.write("<br>nMiVar = "+nMiVar);
+                        document.write("<br>la variable de tipo 'let' es de tipo "+typeof(nMiLet)+"<br>la variable de tipo 'var' es de tipo "+typeof(nMiVar));
+                        nMiLet = ["mi", "lista"];
+                        nMiVar = "asdasd";
+                        document.write("<br><br>la variable de tipo 'let' es de tipo "+typeof(nMiLet)+"<br>la variable de tipo 'var' es de tipo "+typeof(nMiVar));
+                        document.write("<br>nMiLet = "+nMiLet);
+                        document.write("<br>nMiVar = "+nMiVar);
+
+                        var hola = [1,2,3,5];
+                        document.write("<br>"+hola.length);
+                        hola.length = 0;
+                        document.write("<br>"+hola+hola.length);
+                    </script>
+                    <p>Por cierto, comprobado que JS parece no tener asignaciones simultaneas. PAra mi sorpresa se pued emodificar la
+                         longitud de una lista simplemente cambiando el lenght, uuuugh, cosas raras de JS.
+                         Parece que tambien al comprobar el tipo de un objeto simplemente devuelve que es un objeto (ahora entiendo por 
+                         que todo el mundo odia JS), para acceder al nombre de la clase a la que pertenece el objeto se usa 
+                         "objeto.constructor.name"<br>
+                    </p>
+                    <script>
+                        let objeStr = [1,2,3,4];
+                        document.write(
+                            "El objeto es de tipo: " + typeof(objeStr) +
+                            "<br>Pero es una instancia de la clase: "+objeStr.constructor.name
+                        );
+                    </script>
+                    <button onclick="alert('Alerta!!')">Botón</button>
+                </div>
+            </div>
+
+            <div class="hipermediaSection" id="Reproductor">
+                <header class="hipermediaSectionHeader">
                     REPRODUCTOR
                     <button class="plusBtn">+</button>
                 </header>
                 <div class="hipermediaSectionContent">
                     <div class="videoPlayer">
-                        <video width="720" src="/media/I understand nothing.mp4"></video>
-
+                        <video width="720" src="media/I understand nothing.mp4"></video>
                         <button class="playBtn">&#9658;</button>
 
                         <div class="sliderBox">
@@ -634,7 +808,7 @@
                         </div>
 
                     </div>
-                    <script src="/js/videoPlayerControls.js"></script>
+                    <script src="js/videoPlayerControls.js"></script>
                 </div>
             </div>
             

@@ -3,6 +3,10 @@ En este repositorio voy a guardar el trabajo final de tecnologias hipermedia, el
 
 # Changelog
 
+19/04/2024: Arreglado el error por el que no cargaba los archivos multimedia ni los scrips al abrir directamente con navegador. Empezados apuntes de Javascript sobre cosas basicas como variables, listas, algo de objetos y diversas pruebas.
+
+12/04/2024: Mas apuntes sobre tablas y comienzo con las etiquetas multimedia.
+
 05/04/2024: Añadidos apuntes des listas ordenadas y desordenadas y de tablas con algunas de sus propiedades mas utiles.
 
 21/03/2024: Añadidos apuntes de la semana VIII y VI, estos contienen los temas de gestion del fondo (Background, linear gradients...) y y los tipos de valores de el atributo display, con ejemplos del grid y de flex. Solucionado el bug por el que el css integrado en una de las secciones de hipermedia interferia con la barra de navegacion, habia modificado como se comportaban las listas desordenadas y se habia aplicado a todo el documento. Aplicado el grid a la pantalla de contacto para probar.
