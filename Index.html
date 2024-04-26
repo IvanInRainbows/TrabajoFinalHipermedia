@@ -782,6 +782,124 @@
                 </div>
             </div>
 
+            <div class="hipermediaSection">
+                <header class="hipermediaSectionHeader">
+                    SEMANA XII
+                    <button class="plusBtn">+</button>
+                </header>
+                <div class="hipermediaSectionContent">
+                    <h1>Seguimos con JS</h1>
+                    <p>
+                        Bueno, en JS ya vimos que para acceder al nombre de la clase de un objeto hay que acceder al contructor y 
+                        ahi a su nombre, al pedir el tipo(typeof) de un objeto solo nos devuelve.
+                    </p>
+                    <script>
+                        var box = new Object();
+                        box = {
+                            field1 : 2,
+                            field2: 3,
+                            method : function(){
+                                return this.field1 * this.field2;
+                            }
+                        }
+
+                        document.write("<br>Nuestro objeto es de tipo: "+typeof(box));
+                        document.write("<br>Pero el nombre del constructor del mismo objeto es: " + box.constructor.name+"<br> Es decir, en JS hay una clase para objeto genérico pero es diferente al propio tipo (los distingue la mayuscula al principio)");
+                    </script>
+                    <p>Vamos a probar a hacer nuestra propia clase para ver como es:</p>
+                    <script>
+                        class MiObj {
+                            constructor(field1,field2){
+                                this.field1 = field1;
+                                this.field2 = field2;
+                            }
+                            timesFields() {
+                                return this.field1*this.field2;
+                            }
+                        }
+                        miobj = new MiObj(2,2);
+                        document.write("<br>Nuestro objeto es de tipo: "+typeof(miobj));
+                        document.write("<br>Pero el nombre del constructor del mismo objeto es: " + miobj.constructor.name)
+                    </script>
+                    <p><br>Con esto de declarar clases y crear instancias podemos crear, por ejemplo, una clase que haga automaticamente una tabla a traves de una matriz:</p>
+                    <script>
+
+                        
+                        class TablaAuto {
+                            /*
+                            Esta clase toma una matriz y la convierte en una tabla.
+                            Simplemente toma una matriz (lista de lineas o rows con los datos dentro) y la recorre mediante dos bucles anidados
+                            Tambien se le puede pasar un header.
+                            */
+                            constructor(matrix, header = []) {
+                                this.matrix = matrix; //Debe ser una lista de listas
+                                this.header = header; //Debe ser una lista normal
+                            }
+                            printTable(){ 
+                                document.write("<table>");
+                                if (this.header.length > 0){
+                                    document.write("<tr>");
+                                    for(let i=0;i<this.header.length;i++){
+                                        document.write("<th>"+this.header[i]+"</th>")
+                                    }
+                                    document.write("</tr>");
+                                }
+                                for(let i=0;i<this.matrix.length;i++){
+                                    let currentLine = this.matrix[i];
+                                    document.write("<tr>");
+                                    for(let j=0;j<currentLine.length;j++){
+                                        document.write("<td>"+currentLine[j]+"</td>");
+                                    }
+                                    document.write("</tr>");
+                                }
+                                document.write("</table>");
+                            }
+                        }
+                        let datos = [["x11","x12","x13"],["x21","x22","x23"],["x31","x32","x33"]];
+                        let tabla = new TablaAuto(datos, header = ["col1", "col2", "col3"]);
+                        tabla.printTable();
+                        document.write(`Esta tabla esta creada mediante un objeto cuya clase se llama: ${tabla.constructor.name}`); //Madre mia que para crear templates hay que poner el acento al revés rarisimo
+                    </script>
+                    <p><br>Voy a probar a crear una tabla de inputs que tenga tantas lineas y columnas como el usuario ponga en un input</p>
+                    <form name="tablesize" id="tablesize" onsubmit="console.log('asfaw')">
+                        <label for="columnas"></label>
+                        <input type="number" id="tablecol">
+
+                        <label for="filas"></label>
+                        <input type="number" id="tablerows">
+
+                        <button type="submit">Submit</button>
+                    </form>
+                    <div id="JSTable">
+
+                    </div>
+                    <script>
+                        let columnas = 0;
+                        let filas = 0;
+                        let tableform = document.getElementById("tablesize");
+                        let jsTable = document.getElementById("JSTable");
+                        tableform.addEventListener("submit", (e)=>{
+                            e.preventDefault();
+                            columnas = document.getElementById("tablecol").value;
+                            filas = document.getElementById("tablerows").value;
+                            let toAppend = "";
+
+                            toAppend += "<table>";
+                            for(let i = 0; i < filas;i++){
+                                toAppend += "<tr>";
+                                for(let j = 0 ; j < columnas; j++){
+                                    toAppend += "<td>"+i+j+"</td>";
+                                }
+                                toAppend += "</tr>";
+                            }
+                            toAppend += "</table>";
+                            jsTable.innerHTML = toAppend;
+                        })
+                    </script>
+
+                </div>
+            </div>
+
             <div class="hipermediaSection" id="Reproductor">
                 <header class="hipermediaSectionHeader">
                     REPRODUCTOR
