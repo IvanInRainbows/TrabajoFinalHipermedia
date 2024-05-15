@@ -3,6 +3,8 @@ En este repositorio voy a guardar el trabajo final de tecnologias hipermedia, el
 
 # Changelog
 
+15/05/2024: Añadidas pruebas de cosas extra y de uso de matrices para generar tablas.
+
 26/04/2024: Añadidos apuntes de Javascript sobre como hacer objetos, reconocerlos y sobre generacion automatica de tablas mediante informacion que se mete por un form.
 
 19/04/2024: Arreglado el error por el que no cargaba los archivos multimedia ni los scrips al abrir directamente con navegador. Empezados apuntes de Javascript sobre cosas basicas como variables, listas, algo de objetos y diversas pruebas.

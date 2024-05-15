@@ -765,8 +765,8 @@
                         hola.length = 0;
                         document.write("<br>"+hola+hola.length);
                     </script>
-                    <p>Por cierto, comprobado que JS parece no tener asignaciones simultaneas. PAra mi sorpresa se pued emodificar la
-                         longitud de una lista simplemente cambiando el lenght, uuuugh, cosas raras de JS.
+                    <p>Por cierto, comprobado que JS parece no tener asignaciones simultaneas. Para mi sorpresa se puede modificar la
+                         longitud de una lista simplemente cambiando el lenght, cosas raras de JS.
                          Parece que tambien al comprobar el tipo de un objeto simplemente devuelve que es un objeto (ahora entiendo por 
                          que todo el mundo odia JS), para acceder al nombre de la clase a la que pertenece el objeto se usa 
                          "objeto.constructor.name"<br>
@@ -883,7 +883,6 @@
                             columnas = document.getElementById("tablecol").value;
                             filas = document.getElementById("tablerows").value;
                             let toAppend = "";
-
                             toAppend += "<table>";
                             for(let i = 0; i < filas;i++){
                                 toAppend += "<tr>";
@@ -895,6 +894,29 @@
                             toAppend += "</table>";
                             jsTable.innerHTML = toAppend;
                         })
+                        //Esto de las siguientes lineas es una prueba de generacion de tablas con matrices y condicionales y tal
+                        let abc = 10;
+                        if (abc < 0){
+                            console.log("abc es igual a "+abc);
+                        } else{
+                            console.log("abs es mayor que cero")
+                        }
+
+
+                        let mat = [ [0,1,2],
+                                    [3,4,5]];
+                                    
+                        let toAppend = "";
+                        toAppend += "<table>";
+                        for(let i = 0; i < mat.length;i+=1){
+                            toAppend=toAppend+"<tr>";
+                            for(let j = 0;j < mat[i].length;j++){
+                                toAppend+="<td>"+mat[i][j]+"</td>";
+                            }
+                            toAppend=toAppend+"</tr>";
+                        }
+                        toAppend += "<table>";
+                        jsTable.innerHTML=toAppend;
                     </script>
 
                 </div>
