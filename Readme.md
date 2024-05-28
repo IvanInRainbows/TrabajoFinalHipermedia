@@ -3,6 +3,12 @@ En este repositorio voy a guardar el trabajo final de tecnologias hipermedia, el
 
 # Changelog
 
+28/05/2024: Maquetada la parte de "Contacto". Aplicado el estilo a los botones para que se adapten mejor a la estetica de la pagina, asi como los formularios y algunos otros cambios. Añadido el visor de fotografías en la parte de "sobre mi", todavia es un poco rudimentario y los nombres de las fotografias estan hardcodeados. Añadida informacion extra a cada semana de los apuntes de hipermedia. Iniciado el desarrollo del modo noche, aunque no va a estar implementado a tiempo para la entrega y hacen falta muchos retoques estéticos.
+
+27/05/2024: Maquetada la pagina de inicio y añadido el boton para reportar bugs o enviar sugerencias.
+
+20/05/2024: Maquetada la parte de "Sobre mi" con información adecuada dentro de un grid con fotos para que quede mas estético.
+
 15/05/2024: Añadidas pruebas de cosas extra y de uso de matrices para generar tablas.
 
 26/04/2024: Añadidos apuntes de Javascript sobre como hacer objetos, reconocerlos y sobre generacion automatica de tablas mediante informacion que se mete por un form.
